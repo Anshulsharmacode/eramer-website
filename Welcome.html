@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERAMR GLOBAL PRIVATE LIMITED</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="welcome-page">
+        <div class="logo-container">
+            <img src="./img/logo/logo-final.jpeg" alt="Private Limited Company Logo" class="logo">
+        </div>
+        <h1 class="Private Limited Company-name" style="color:#FFD700;">ERAMR GLOBAL PRIVATE LIMITED</h1>
+        <p class="punchline">Handcrafted Aesthetics to Your Soul's Delight</p>
+
+<a class="box__link button-animation" href="./index.html">
+  Visit Website
+</a>
+    </div>
+    <!-- <div class="additional-images">
+        <img src="./img/cloths-img/img-4.jpg" alt="Top Left Image" class="image top-left">
+        <img src="./img/cloths-img/img-8.jpg" alt="Top Right Image" class="image top-right">
+        <img src="./img/services/img-3.jpeg" alt="Bottom Left Image" class="image bottom-left">
+        <img src="./img/cloths-img/img-6.jpg" alt="Bottom Right Image" class="image bottom-right">
+    </div> -->
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+
+.welcome-page {
+    text-align: center;
+    position: relative;
+    /* animation: fadeInBackground 2s ease-in-out; */
+}
+
+.logo-container {
+    animation: logoEntry 2s ease-in-out;
+}
+
+.logo {
+    /* border: 5px solid white;  */
+    width: 400px;
+    height: auto;
+    opacity: 0;
+}
+
+.Private Limited Company-name {
+    color: #fff;
+    font-size: 2em;
+    margin: 20px 0;
+    opacity: 0;
+    animation: textEntry 2s 1s forwards;
+}
+
+.punchline {
+    font-size: 1.2em;
+    color: #fff;
+    opacity: 0;
+    animation: textEntry 2s 2s forwards;
+}
+
+.additional-images {
+ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.image {
+    border: 5px solid #ffd900cb;
+    border-radius: 20px;
+    position: absolute;
+    width: 150px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.top-left {
+    top: 100px;
+    left: 100px;
+    animation: topLeftEntry 3s forwards;
+}
+
+.top-right {
+    top: 100px;
+    right: 100px;
+    animation: topRightEntry 3s forwards;
+}
+
+.bottom-left {
+    bottom: 100px;
+    left: 100px;
+    animation: bottomLeftEntry 3s forwards;
+}
+
+.bottom-right {
+    bottom: 100px;
+    right: 100px;
+    animation: bottomRightEntry 3s forwards;
+}
+
+@keyframes fadeInBackground {
+    0% { background-color: #ffffff; }
+    100% { background-color: #f0f0f0; }
+}
+
+@keyframes logoEntry {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes textEntry {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes topLeftEntry {
+    0% { opacity: 0; transform: translate(-50%, -50%) rotate(-360deg); }
+    100% { opacity: 1; transform: translate(0, 0) rotate(0); }
+}
+
+@keyframes topRightEntry {
+    0% { opacity: 0; transform: translate(50%, -50%) rotate(360deg); }
+    100% { opacity: 1; transform: translate(0, 0) rotate(0); }
+}
+
+@keyframes bottomLeftEntry {
+    0% { opacity: 0; transform: translate(-50%, 50%) rotate(-360deg); }
+    100% { opacity: 1; transform: translate(0, 0) rotate(0); }
+}
+
+@keyframes bottomRightEntry {
+    0% { opacity: 0; transform: translate(50%, 50%) rotate(360deg); }
+    100% { opacity: 1; transform: translate(0, 0) rotate(0); }
+}
+
+</style>
+<style>
+    /*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --body-color: #393937;
+  --accent-color: #ffd900cb;
+  --white-color: #fff;
+  --box-shadow: 0 0 5px #ffd900cb, 0 0 25px #ffd900cb, 0 0 50px #ffd900cb,
+    0 0 100px #ffd900cb;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: 1rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*=============== BASE ===============*/
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background: var(--body-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+    font-weight: bolder;
+  text-decoration: none;
+}
+
+.button-animation {
+    top: 30px;
+  position: relative;
+  display: inline-block;
+  padding: 20px 30px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 4px;
+  transition: 0.5s;
+  span {
+    position: absolute;
+    display: block;
+  }
+
+
+
+  &:hover {
+    background-color: var(--accent-color);
+    color: var(--black-color);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+  }
+}
+
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector('.logo').style.opacity = 1;
+    document.querySelectorAll('.image').forEach(image => {
+        image.style.opacity = 1;
+    });
+});
+
+</script>
